@@ -1,27 +1,29 @@
 import React from "react";
+import { CgMenuGridO } from "react-icons/cg";
 
 const NavBar = () => {
   return (
-    <nav className="flex justify-end items-center p-5">
+    <nav className="flex justify-end items-center p-4 md:p-5">
       <ul className=" flex justify-around items-center gap-4">
         
-        <li className=" hover:underline hover:underline-offset-1">
+        <li className="text-sm md:text-base hover:underline hover:underline-offset-1">
            <a href="https://mail.google.com/mail">
              Gmail
            </a>
            
         </li>
-        <li className=" hover:underline hover:underline-offset-1">
+        <li className=" text-sm md:text-base hover:underline hover:underline-offset-1">
            <a href="https://mail.google.com/mail">
              Images
            </a>
            
         </li>
-        <li>
-            Icon
+        <li className="hover:rounded-full p-2 hover:bg-gray-200 cursor-pointer">
+          <span className="  text-sm md:text-2xl "><CgMenuGridO /></span>
+          
         </li>
         <li>
-            <button className=" bg-blue-600 text-white rounded-md px-6 py-2">Sign In</button>
+            <button className=" bg-blue-600 text-white text-sm md:text-base  rounded-md px-4 py-2 md:px-6 md:py-2">Sign In</button>
             
         </li>
       </ul>
