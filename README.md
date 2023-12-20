@@ -2,7 +2,8 @@
 
 ## Documentation of Implementation
 
-1. Project Overview:
+<br />
+<h3>1. Project Overview:</h3>
  <ul>
  <li>
     This project uses Vite, React, and Tailwind CSS to create a web application.
@@ -12,9 +13,9 @@
  </li>
  
  </ul>
+<br />
+<h3>2. File Structure:</h3>
 
-
-2. File Structure:
    <ul>
  <li>
     The project follows a structured directory layout.
@@ -24,8 +25,8 @@
  </li>
  
  </ul>
-
-3. Semantic HTML and Styling:
+<br />
+ <h3>3. Semantic HTML and Styling:</h3>
      <ul>
  <li>
     Incorporated semantic elements such as <nav> for navigation and <footer> for the page's bottom section
@@ -33,16 +34,16 @@
  
  
  </ul>
+ <br />
+ <h3>4. Dropdown Menu:</h3>
 
-4. Dropdown Menu:
 <ul>
  <li>
     Navbar features a dropdown menu for enhanced user navigation.
  </li>
  </ul>
-
-
-5. React Components:
+<br />
+<h3>5. React Components:</h3>
        <ul>
  <li>
     Navbar: Showcases a dropdown when the user clicks on the menu.
@@ -57,8 +58,8 @@ The SearchResult component retrieves information from a public folder's info.jso
  
  
  </ul>
-
-6. Search Functionality:
+ <br />
+<h3>6. Search Functionality:</h3>
      <ul>
  <li>
     Users can search for queries using the search input.
@@ -77,16 +78,17 @@ Clicking on a search result redirects to another page which is google page.
  
  
  </ul>
+<br />
+<h3>7. Footer:</h3>
 
-
-7. Footer:
        <ul>
  <li>
     Footer component is implemented for giving a complete look of google home page. 
  </li>
  </ul>
+ <br />
+<h3>8. API Integration:</h3>
 
-8. API Integration:
    <ul>
  <li>
     JSON data is fetched from "info.json" file  in the public folder.
@@ -96,18 +98,16 @@ Clicking on a search result redirects to another page which is google page.
  </li>
  </ul>
 
-
-
-9.  Deployment:
+<br />
+<h3>9.  Deployment:</h3>
      <ul>
  <li>
     The application is deployed using netlify's deployment provide details on how to access the live site.
  </li>
  </ul>
+<br />
 
-
-
-10.  Responsiveness:
+<h3>10.  Responsiveness:</h3>
      <ul>
  <li>
     The website adjusts well on mobiles, tablets, laptops, and desktop computers, ensuring a good user experience on any device. 
