@@ -6,7 +6,7 @@ const Home = () => {
     const [searchResult, setSearch] = useState([])
 
     const fetchData = (value) => {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("/info.json")
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -14,8 +14,8 @@ const Home = () => {
               if(value){
                 return  (
                   item && 
-                  item.name &&
-                  item.name.toLowerCase().includes(value)
+                  item.title &&
+                  item.title.toLowerCase().includes(value)
                 )
               }
                  
@@ -27,9 +27,7 @@ const Home = () => {
     }
 
     const handleChange = (value) => {
-        
-        const valueLowerCase = value.toLowerCase()
-        setInput(valueLowerCase)
+        setInput(value)
         fetchData(value)
     }
     return (
@@ -55,12 +53,12 @@ const Home = () => {
                       className=' w-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/2048px-Google_Lens_Icon.svg.png" alt="" />
                     </div> 
                 </div>
-                <div className='flex  -mt-5  flex-col px-3'>
+                <div className='flex  -mt-3  flex-col px-3'>
                    
                     <SearchResult searchResult={searchResult} />
                     <div className=' pt-8 flex justify-center items-center gap-4'>
-                            <button className=' bg-gray-200 text-black py-2 px-3 rounded-md'>Google Search</button>
-                            <button className=' bg-gray-200 text-black py-2 px-3 rounded-md'>I'm feeling Lucky</button>
+                            <button className=' border border-gray-200 hover:border hover:border-gray-400 bg-gray-200 text-black py-1.5 text-sm px-3 rounded-md'>Google Search</button>
+                            <button className='  border border-gray-200  hover:border hover:border-gray-400 bg-gray-200 text-black py-1.5 text-sm px-3 rounded-md'>I'm feeling Lucky</button>
                         </div>
                 </div>
             </div>
