@@ -2,8 +2,6 @@ import React from "react";
 import { FaClockRotateLeft } from "react-icons/fa6";
 
 const SearchResult = ({ searchResult }) => {
-  // Log the search result data for debugging
-  console.log(searchResult);
 
   return (
     <div className="flex flex-col gap-2 pt-4">

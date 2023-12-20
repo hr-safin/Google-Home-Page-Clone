@@ -32,7 +32,7 @@ const Home = () => {
 
     // Handle input change
     const handleChange = (value) => {
-        setInput(value);
+        setInput(value.toLowerCase());
         fetchData(value);
     };
 
