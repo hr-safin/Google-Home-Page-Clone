@@ -80,7 +80,6 @@ Clicking on a search result redirects to another page which is google page.
  </ul>
 <br />
 <h3>7. Footer:</h3>
-
        <ul>
  <li>
     Footer component is implemented for giving a complete look of google home page. 
