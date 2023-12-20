@@ -7,13 +7,13 @@ const NavBar = () => {
       <ul className=" flex justify-around items-center gap-4">
         
         <li className="text-sm md:text-base hover:underline hover:underline-offset-1">
-           <a href="https://mail.google.com/mail">
+           <a target="_blank" href="https://google.com">
              Gmail
            </a>
            
         </li>
         <li className=" text-sm md:text-base hover:underline hover:underline-offset-1">
-           <a href="https://mail.google.com/mail">
+           <a target="_blank" href="https://google.com">
              Images
            </a>
            

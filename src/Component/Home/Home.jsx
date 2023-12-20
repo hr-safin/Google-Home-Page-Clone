@@ -11,13 +11,14 @@ const Home = () => {
         .then(data => {
             console.log(data)
             const result = data.filter((item) => {
+              if(value){
                 return  (
-                  value &&
                   item && 
-                  item.name && 
+                  item.name &&
                   item.name.toLowerCase().includes(value)
                 )
-                  
+              }
+                 
             })
 
             // console.log(result)
@@ -26,7 +27,9 @@ const Home = () => {
     }
 
     const handleChange = (value) => {
-        setInput(value)
+        
+        const valueLowerCase = value.toLowerCase()
+        setInput(valueLowerCase)
         fetchData(value)
     }
     return (
@@ -38,7 +41,7 @@ const Home = () => {
                   className=' w-[400px] lg:w-[500px] flex mx-auto relative rounded-full  bg-gray-100'>
                 <input 
                    value={inputValue} 
-                    className='w-full relative py-2  border border-gray-300 px-12 focus:border focus:outline-none rounded-full'      type="text" 
+                    className='w-full relative py-2  border border-gray-300 px-12 focus:shadow-md   focus:border-none focus:outline-none rounded-full'      type="text" 
                      onChange={(e) => handleChange(e.target.value)}
                      name="" 
                      id="" 
@@ -52,8 +55,13 @@ const Home = () => {
                       className=' w-5' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Google_Lens_Icon.svg/2048px-Google_Lens_Icon.svg.png" alt="" />
                     </div> 
                 </div>
-                <div className=' px-5 '>
+                <div className='flex  -mt-5  flex-col px-3'>
+                   
                     <SearchResult searchResult={searchResult} />
+                    <div className=' pt-8 flex justify-center items-center gap-4'>
+                            <button className=' bg-gray-200 text-black py-2 px-3 rounded-md'>Google Search</button>
+                            <button className=' bg-gray-200 text-black py-2 px-3 rounded-md'>I'm feeling Lucky</button>
+                        </div>
                 </div>
             </div>
         </div>
