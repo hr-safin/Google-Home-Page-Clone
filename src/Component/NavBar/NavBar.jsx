@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { CgMenuGridO } from "react-icons/cg";
 
 const NavBar = () => {
+
+  // dropdown initial value is false 
   const [dropdown, setDropDown] = useState(false)
 
   const handleDropDown = () => {
-    setDropDown(!dropdown)
+    //clicking on handleDropDown will toggle value from false to true and true to false
+    setDropDown(!dropdown) 
   }
   return (
+    // navigation bar starts here
     <nav className="flex justify-end items-center p-4 md:p-5">
       <ul className=" flex justify-around items-center gap-4">
         <li className="text-sm md:text-base hover:underline hover:underline-offset-1">
@@ -20,13 +24,18 @@ const NavBar = () => {
             Images
           </a>
         </li>
+         {/* clicking on the MenuGrid icon will show a dropdown while showing the dropdown the value of the dropdown will be true  */}
+
         <li onClick={handleDropDown} className={`hover:rounded-full p-2 hover:bg-gray-200  ${dropdown && "active:bg-gray-200 active:rounded-full" } focus:bg-gray-200 cursor-pointer`}>
           <span className="  text-sm md:text-2xl ">
             <CgMenuGridO />
           </span>
         </li>
         <div>
-        <div className={`${dropdown ? "flex absolute  overflow-auto h-96 right-16 rounded-3xl top-20 w-96 bg-gray-100" : "hidden"} `}>
+
+          {/* dropdown start */}
+
+        <div className={`${dropdown ? "flex absolute z-30  overflow-auto h-96 right-16 rounded-3xl top-20 w-96 bg-gray-100" : "hidden"} `}>
              <div className="  bg-gray-300 h-[570px]  w-[395px] m-3 rounded-2xl">
                 <div className=" grid grid-cols-3 gap-4 p-3">
                   <div className=" p-4 cursor-pointer hover:bg-gray-200 hover:rounded-xl flex flex-col items-center gap-1">
@@ -99,17 +108,19 @@ const NavBar = () => {
         </div>
         
         </div>
+        {/* dropdown ends */}
         <li>
           <a
             target="_blank"
             href="https://accounts.google.com"
-            className=" bg-blue-600 text-white text-sm md:text-base  rounded-md px-4 py-2 md:px-6 md:py-2"
+            className=" bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base  rounded-md px-4 py-2 md:px-6 md:py-2"
           >
             Sign In
           </a>
         </li>
       </ul>
     </nav>
+    // navigation bar ends here
   );
 };
 

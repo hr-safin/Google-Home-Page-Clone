@@ -1,3 +1,4 @@
+import Footer from "./Component/Footer/Footer"
 import Home from "./Component/Home/Home"
 import NavBar from "./Component/NavBar/NavBar"
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <NavBar />
       <Home />
+      <Footer />
         
     </>
   )
