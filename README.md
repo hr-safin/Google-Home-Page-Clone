@@ -93,6 +93,9 @@ Clicking on a search result redirects to another page which is google page.
     JSON data is fetched from "info.json" file  in the public folder.
  </li>
  <li>
+    In my info.json file, I included details about the book and a list of countries from A to Z. I got help from ChatGPT to make up fake API data for this JSON file.
+ </li>
+ <li>
     SearchResult component utilizes this data for displaying search results.
  </li>
  </ul>
